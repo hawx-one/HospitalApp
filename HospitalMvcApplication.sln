@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{1E780A
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalMvcApplication.Model", "HospitalMvcApplication.Model\HospitalMvcApplication.Model.csproj", "{F96095B2-AE01-45C7-927C-D54C838F8F5B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +24,10 @@ Global
 		{A5F5EB7C-50A8-4086-9C00-0C0659BA5393}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5F5EB7C-50A8-4086-9C00-0C0659BA5393}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5F5EB7C-50A8-4086-9C00-0C0659BA5393}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F96095B2-AE01-45C7-927C-D54C838F8F5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F96095B2-AE01-45C7-927C-D54C838F8F5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F96095B2-AE01-45C7-927C-D54C838F8F5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F96095B2-AE01-45C7-927C-D54C838F8F5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
