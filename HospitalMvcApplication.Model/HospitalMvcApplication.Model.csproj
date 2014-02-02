@@ -57,6 +57,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="SqlRepository.cs" />
+    <Compile Include="SqlRepository\Role.cs" />
+    <Compile Include="SqlRepository\User.cs" />
+    <Compile Include="SqlRepository\UserRole.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

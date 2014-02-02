@@ -21,16 +21,16 @@
         <classShapeMoniker Id="1e29adb8-ae88-4008-9264-b9ef213d48b9" />
       </nodes>
     </associationConnector>
-    <classShape Id="f1422492-5162-48ef-a9d2-5479b7981d3e" absoluteBounds="0.75, 2.625, 2, 1.3862939453125">
+    <classShape Id="61085759-5499-409d-94ae-c9671f39a667" absoluteBounds="0.75, 2.75, 2, 2.1554996744791666">
       <DataClassMoniker Name="/HospitalProjectDbDataContext/User" />
       <nestedChildShapes>
-        <elementListCompartment Id="b34c3230-fd9d-4e06-bad1-28227db6aa62" absoluteBounds="0.76500000000000012, 3.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="270a7c2e-963c-48b0-93c9-c5545d8a358d" absoluteBounds="0.76500000000000012, 3.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.75 : 3.31814697265625); (4.5 : 3.31814697265625); (4.5 : 2.3862939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 3.82774983723958); (4.5 : 3.82774983723958); (4.5 : 2.3862939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/HospitalProjectDbDataContext/User/User_UserRole" />
       <nodes>
-        <classShapeMoniker Id="f1422492-5162-48ef-a9d2-5479b7981d3e" />
+        <classShapeMoniker Id="61085759-5499-409d-94ae-c9671f39a667" />
         <classShapeMoniker Id="1e29adb8-ae88-4008-9264-b9ef213d48b9" />
       </nodes>
     </associationConnector>

@@ -438,6 +438,14 @@ namespace HospitalMvcApplication.Model
 		
 		private string _Password;
 		
+		private System.DateTime _AddedDate;
+		
+		private System.Nullable<System.DateTime> _ActivatedDate;
+		
+		private string _ActivatedLink;
+		
+		private System.Nullable<System.DateTime> _LastVisitDate;
+		
 		private EntitySet<UserRole> _UserRoles;
 		
     #region Extensibility Method Definitions
@@ -450,6 +458,14 @@ namespace HospitalMvcApplication.Model
     partial void OnEmailChanged();
     partial void OnPasswordChanging(string value);
     partial void OnPasswordChanged();
+    partial void OnAddedDateChanging(System.DateTime value);
+    partial void OnAddedDateChanged();
+    partial void OnActivatedDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnActivatedDateChanged();
+    partial void OnActivatedLinkChanging(string value);
+    partial void OnActivatedLinkChanged();
+    partial void OnLastVisitDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnLastVisitDateChanged();
     #endregion
 		
 		public User()
@@ -514,6 +530,86 @@ namespace HospitalMvcApplication.Model
 					this._Password = value;
 					this.SendPropertyChanged("Password");
 					this.OnPasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AddedDate", DbType="DateTime NOT NULL")]
+		public System.DateTime AddedDate
+		{
+			get
+			{
+				return this._AddedDate;
+			}
+			set
+			{
+				if ((this._AddedDate != value))
+				{
+					this.OnAddedDateChanging(value);
+					this.SendPropertyChanging();
+					this._AddedDate = value;
+					this.SendPropertyChanged("AddedDate");
+					this.OnAddedDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ActivatedDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ActivatedDate
+		{
+			get
+			{
+				return this._ActivatedDate;
+			}
+			set
+			{
+				if ((this._ActivatedDate != value))
+				{
+					this.OnActivatedDateChanging(value);
+					this.SendPropertyChanging();
+					this._ActivatedDate = value;
+					this.SendPropertyChanged("ActivatedDate");
+					this.OnActivatedDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ActivatedLink", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string ActivatedLink
+		{
+			get
+			{
+				return this._ActivatedLink;
+			}
+			set
+			{
+				if ((this._ActivatedLink != value))
+				{
+					this.OnActivatedLinkChanging(value);
+					this.SendPropertyChanging();
+					this._ActivatedLink = value;
+					this.SendPropertyChanged("ActivatedLink");
+					this.OnActivatedLinkChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastVisitDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LastVisitDate
+		{
+			get
+			{
+				return this._LastVisitDate;
+			}
+			set
+			{
+				if ((this._LastVisitDate != value))
+				{
+					this.OnLastVisitDateChanging(value);
+					this.SendPropertyChanging();
+					this._LastVisitDate = value;
+					this.SendPropertyChanged("LastVisitDate");
+					this.OnLastVisitDateChanged();
 				}
 			}
 		}
