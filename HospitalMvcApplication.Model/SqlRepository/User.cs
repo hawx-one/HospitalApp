@@ -51,7 +51,6 @@ namespace HospitalMvcApplication.Model
 
             return false;
         }
-        
     }
 }
 
