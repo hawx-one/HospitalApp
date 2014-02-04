@@ -10,6 +10,7 @@ namespace HospitalMvcApplication.Model
     {
         [Inject]
         public HospitalProjectDbDataContext Db { get; set; }
+
     }
 }
 

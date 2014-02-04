@@ -17,6 +17,7 @@ namespace HospitalMvcApplication.Model
         {
             if (instance.Id == 0)
             {
+                instance.AddedDate = DateTime.Now;
                 instance.ActivatedLink = User.GetActivateUrl();
                 Db.Users.InsertOnSubmit(instance);
                 Db.Users.Context.SubmitChanges();
