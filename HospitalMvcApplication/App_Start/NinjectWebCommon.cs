@@ -1,3 +1,5 @@
+using System.Configuration;
+
 [assembly: WebActivator.PreApplicationStartMethod(typeof(HospitalMvcApplication.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivator.ApplicationShutdownMethodAttribute(typeof(HospitalMvcApplication.App_Start.NinjectWebCommon), "Stop")]
 
@@ -10,6 +12,7 @@ namespace HospitalMvcApplication.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using HospitalMvcApplication.Model;
 
     public static class NinjectWebCommon 
     {
@@ -53,6 +56,12 @@ namespace HospitalMvcApplication.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<HospitalProjectDbDataContext>()
+                .ToMethod(
+                    c =>
+                        new HospitalProjectDbDataContext(
+                            ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString));
+            kernel.Bind<IRepository>().To<SqlRepository>().InRequestScope();
         }        
     }
 }
