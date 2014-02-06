@@ -6,18 +6,10 @@
 <h2>Index Page</h2>
 
 <p>
-    @foreach (var role in Model)
-    {
-        <div class="item">
-            <span class="id">
-                @role.Id
-            </span>
-            <span class="name">
-                @role.Name
-            </span>
-            <span class="Code">
-                @role.Code
-            </span>
-        </div>
-    }
+    <div class="menu">
+        <a href="@Url.Action("Index", "Role")">Роли</a>
+        @Html.ActionLink("Пользователи", "Index", "User")
+    </div>
 </p>
+
+
