@@ -1,4 +1,5 @@
 using System.Configuration;
+using HospitalMvcApplication.Mappers;
 
 [assembly: WebActivator.PreApplicationStartMethod(typeof(HospitalMvcApplication.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivator.ApplicationShutdownMethodAttribute(typeof(HospitalMvcApplication.App_Start.NinjectWebCommon), "Stop")]
@@ -62,6 +63,7 @@ namespace HospitalMvcApplication.App_Start
                         new HospitalProjectDbDataContext(
                             ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString));
             kernel.Bind<IRepository>().To<SqlRepository>().InRequestScope();
+            kernel.Bind<IMapper>().To<CommonMapper>().InSingletonScope();
         }        
     }
 }

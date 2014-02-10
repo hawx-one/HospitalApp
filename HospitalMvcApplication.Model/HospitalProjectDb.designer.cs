@@ -438,6 +438,8 @@ namespace HospitalMvcApplication.Model
 		
 		private string _Password;
 		
+		private System.Nullable<System.DateTime> _Birthdate;
+		
 		private System.DateTime _AddedDate;
 		
 		private System.Nullable<System.DateTime> _ActivatedDate;
@@ -458,6 +460,8 @@ namespace HospitalMvcApplication.Model
     partial void OnEmailChanged();
     partial void OnPasswordChanging(string value);
     partial void OnPasswordChanged();
+    partial void OnBirthdateChanging(System.Nullable<System.DateTime> value);
+    partial void OnBirthdateChanged();
     partial void OnAddedDateChanging(System.DateTime value);
     partial void OnAddedDateChanged();
     partial void OnActivatedDateChanging(System.Nullable<System.DateTime> value);
@@ -530,6 +534,26 @@ namespace HospitalMvcApplication.Model
 					this._Password = value;
 					this.SendPropertyChanged("Password");
 					this.OnPasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Birthdate", DbType="Datetime")]
+		public System.Nullable<System.DateTime> Birthdate
+		{
+			get
+			{
+				return this._Birthdate;
+			}
+			set
+			{
+				if ((this._Birthdate != value))
+				{
+					this.OnBirthdateChanging(value);
+					this.SendPropertyChanging();
+					this._Birthdate = value;
+					this.SendPropertyChanged("Birthdate");
+					this.OnBirthdateChanged();
 				}
 			}
 		}
