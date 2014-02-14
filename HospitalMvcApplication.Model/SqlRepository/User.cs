@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace HospitalMvcApplication.Model
 {public partial class SqlRepository 
@@ -29,15 +30,18 @@ namespace HospitalMvcApplication.Model
 
         public bool UpdateUser(User instance)
         {
-            User cache = Db.Users.Where(p => p.Id == instance.Id).FirstOrDefault();
-            if (cache != null)
-            {
-                cache.Email = instance.Email;
-                Db.Users.Context.SubmitChanges();
-                return true;
-            }
-
-            return false;
+            
+                User cache = Db.Users.Where(p => p.Id == instance.Id).FirstOrDefault();
+                if (cache != null)
+                {
+                    cache.Birthdate = instance.Birthdate;
+                    cache.AvatarPath = instance.AvatarPath;
+                    cache.Email = instance.Email;
+                    Db.Users.Context.SubmitChanges();
+                    return true;
+                }
+                return false;
+            
         }
 
         public bool RemoveUser(int idUser)
