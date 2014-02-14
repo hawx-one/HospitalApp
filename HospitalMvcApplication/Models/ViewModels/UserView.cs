@@ -7,24 +7,21 @@ using System.Web.Mvc;
 
 namespace HospitalMvcApplication.Models.ViewModels
 {
-
     public class UserView
     {
-        public int ID { get; set; }
-
-        [Required(ErrorMessage = "Введите email")]
+        public int Id { get; set; }
+        
+        [Required(ErrorMessage = "Введіть email")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Введите пароль")]
+        [Required(ErrorMessage = "Введіть пароль")]
         public string Password { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "Пароли должны совпадать")]
+        [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "Паролі повинні співпадати")]
         public string ConfirmPassword { get; set; }
-
+        
         public string Captcha { get; set; }
-
-        public string AvatarPath { get; set; }
-
+        
         public int BirthdateDay { get; set; }
 
         public int BirthdateMonth { get; set; }

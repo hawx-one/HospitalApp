@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Ninject;
-using HospitalMvcApplication.Model;
 using HospitalMvcApplication.Mappers;
+using HospitalMvcApplication.Model;
+using Ninject;
 
 namespace HospitalMvcApplication.Controllers
 {
-    public abstract class BaseController : Controller
+    public class BaseController : Controller
     {
         [Inject]
         public IRepository Repository { get; set; }
-   
 
-     [Inject]
+        [Inject]
         public IMapper ModelMapper { get; set; }
     }
-    
 }

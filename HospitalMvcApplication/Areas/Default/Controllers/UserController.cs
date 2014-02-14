@@ -1,17 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using HospitalMvcApplication.Model;
 using HospitalMvcApplication.Models.ViewModels;
 using HospitalMvcApplication.Tools;
-using System.Drawing.Imaging;
-using HospitalMvcApplication.Model;
 
 namespace HospitalMvcApplication.Areas.Default.Controllers
 {
     public class UserController : DefaultController
     {
+        //
+        // GET: /Default/User/
+
         public ActionResult Index()
         {
             var users = Repository.Users.ToList();

@@ -14,12 +14,11 @@ namespace HospitalMvcApplication
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapHttpRoute(
+            routes.MapRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                url: "{controller}/{action}/{id}",
+                defaults: new { id = UrlParameter.Optional }
             );
-
         }
     }
 }

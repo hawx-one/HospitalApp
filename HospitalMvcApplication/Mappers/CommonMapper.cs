@@ -18,7 +18,7 @@ namespace HospitalMvcApplication.Mappers
                     .ForMember(dest => dest.BirthdateYear, opt => opt.MapFrom(src => src.Birthdate.Year));
             Mapper.CreateMap<UserView, User>()
                     .ForMember(dest => dest.Birthdate, opt => opt.MapFrom(src => new DateTime(src.BirthdateYear, src.BirthdateMonth, src.BirthdateDay)));
-
+            
         }
 
         public object Map(object source, Type sourceType, Type destinationType)

@@ -13,6 +13,5 @@ namespace HospitalMvcApplication.Areas.Default.Controllers
             var roles = Repository.Roles.ToList();
             return View(roles);
         }
-
     }
 }
