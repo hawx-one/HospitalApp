@@ -4,7 +4,7 @@
     Layout = "~/Areas/Default/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Register</h2>
+<h2>Реєстрація</h2>
 @using (Html.BeginForm("Register", "User", FormMethod.Post, new { @class = "form-horizontal" }))
 {
     @Html.ValidationSummary()
@@ -65,7 +65,9 @@
             <button type="submit" class="btn btn-primary">
                 Register
             </button>
-            @Html.ActionLink("Cancel", "Index", null, null, new { @class = "btn" })
+            <button>
+                @Html.ActionLink("Cancel", "Index", null, null, new { @class = "btn" })
+            </button>
         </div>
     </fieldset>
 }

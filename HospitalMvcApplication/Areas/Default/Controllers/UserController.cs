@@ -33,12 +33,12 @@ namespace HospitalMvcApplication.Areas.Default.Controllers
         {
             if (userView.Captcha != (string)Session[CaptchaImage.CaptchaValueKey])
             {
-                ModelState.AddModelError("Captcha", "Текст с картинки введен неверно");
+                ModelState.AddModelError("Captcha", "Текст з картинки введений неправильно");
             }
             var anyUser = Repository.Users.Any(p => string.Compare(p.Email, userView.Email) == 0);
             if (anyUser)
             {
-                ModelState.AddModelError("Email", "Пользователь с таким email уже зарегистрирован");
+                ModelState.AddModelError("Email", "Користувач з таким Емейлом вже зареєстрований");
             }
 
             if (ModelState.IsValid)
