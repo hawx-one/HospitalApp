@@ -14,6 +14,7 @@ namespace HospitalMvcApplication.App_Start
     using Ninject;
     using Ninject.Web.Common;
     using HospitalMvcApplication.Model;
+    using HospitalMvcApplication.Global.Auth;
  
 
     public static class NinjectWebCommon 
@@ -61,6 +62,7 @@ namespace HospitalMvcApplication.App_Start
             kernel.Bind<HospitalProjectDbDataContext>().ToMethod(c => new HospitalProjectDbDataContext( ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString));
             kernel.Bind<IRepository>().To<SqlRepository>().InRequestScope();
             kernel.Bind<IMapper>().To<CommonMapper>().InSingletonScope();
+            kernel.Bind<IAuthentication>().To<CustomAuthentication>().InRequestScope();
         }        
     }
 }

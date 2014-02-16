@@ -56,6 +56,16 @@ namespace HospitalMvcApplication.Model
 
             return false;
         }
+
+        public User GetUser(string email)
+        {
+            return Db.Users.FirstOrDefault(p => string.Compare(p.Email, email, true) == 0);
+        }
+
+        public User Login(string email, string password)
+        {
+            return Db.Users.FirstOrDefault(p => string.Compare(p.Email, email, true) == 0 && p.Password == password);
+        }
     }
 }
 

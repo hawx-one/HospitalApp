@@ -28,6 +28,9 @@ namespace HospitalMvcApplication.Model
         bool UpdateUser(User instance);
 
         bool RemoveUser(int idUser);
+        User GetUser(string email);
+
+        User Login(string email, string password);
 
         #endregion 
         

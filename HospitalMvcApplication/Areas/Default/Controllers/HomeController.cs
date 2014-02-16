@@ -15,8 +15,13 @@ namespace HospitalMvcApplication.Areas.Default.Controllers
 
         public ActionResult Index()
         {
+          
             return View();
         }
 
+        public ActionResult UserLogin()
+        {
+            return View(CurrentUser);
+        }
     }
 }

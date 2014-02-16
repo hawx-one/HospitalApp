@@ -1,15 +1,26 @@
-﻿@{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+﻿@model IList<HospitalMvcApplication.Model.Role>
+
+@{
+    ViewBag.Title = "Roles";
+    Layout = "~/Areas/Default/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index Page</h2>
+<h2>Role</h2>
 
 <p>
-    <div class="menu">
-        <a href="@Url.Action("Index", "Role")">Роли</a>
-        @Html.ActionLink("Пользователи", "Index", "User")
-    </div>
+    @foreach (var role in Model)
+    {
+        <div class="item">
+            <span class="id">
+                @role.Id
+            </span>
+            <span class="name">
+                @role.Name
+            </span>
+            <span class="Code">
+                @role.Code
+            </span>
+        </div>
+    }
+
 </p>
-
-

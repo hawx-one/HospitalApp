@@ -19,6 +19,25 @@ namespace HospitalMvcApplication.Model
 
         public string Captcha { get; set; }
 
+        public bool InRoles(string roles)
+        {
+            if (string.IsNullOrWhiteSpace(roles))
+            {
+                return false;
+            }
+
+            var rolesArray = roles.Split(new[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var role in rolesArray)
+            {
+                var hasRole = UserRoles.Any(p => string.Compare(p.Role.Code, role, true) == 0);
+                if (hasRole)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
