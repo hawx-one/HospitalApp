@@ -3,10 +3,10 @@
 @if (Model != null)
 {
     <li>@Model.Email</li>
-    <li>@Html.ActionLink("Выход", "Logout", "Login")</li>
+    <li>@Html.ActionLink("Вихід", "Logout", "Login")</li>
 }
 else
 {
-    <li>@Html.ActionLink("Вход", "Index", "Login")</li>
-    <li>@Html.ActionLink("Регистрация", "Register", "User")</li>
+    <li>@Html.ActionLink("Вхід", "Index", "Login")</li>
+    <li>@Html.ActionLink("Реєстрація", "Register", "User")</li>
 }
