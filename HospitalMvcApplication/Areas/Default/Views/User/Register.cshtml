@@ -21,7 +21,7 @@
         </div>
         <div class="control-group">
             <label class="control-label" for="FirstName">
-                Password
+                Пароль
             </label>
             <div class="controls">
                 @Html.ValidationMessage("Password")
@@ -30,7 +30,7 @@
         </div>
         <div class="control-group">
             <label class="control-label" for="FirstName">
-                Confirm Password
+                Повторіть пароль
             </label>
             <div class="controls">
                 @Html.ValidationMessage("ConfirmPassword")
@@ -39,17 +39,18 @@
         </div>
         <div class="control-group">
             <label class="control-label" for="FirstName">
-                Birth date
+                Дата народження
             </label>
             <div class="controls">
-                @Html.DropDownList("BirthdateDay", Model.BirthdateDaySelectList)
-                @Html.DropDownList("BirthdateMonth", Model.BirthdateMonthSelectList)
-                @Html.DropDownList("BirthdateYear", Model.BirthdateYearSelectList)
+                @Html.DropDownList("BirthdateDay", Model.BirthdateDaySelectList, new { @class = "select-day" })
+                @Html.DropDownList("BirthdateMonth", Model.BirthdateMonthSelectList, new { @class = "select-month" })
+                @Html.DropDownList("BirthdateYear", Model.BirthdateYearSelectList, new { @class = "select-year" })
             </div>
+
         </div>
         <div class="control-group">
             <label class="control-label" for="FirstName">
-                Captcha
+                Введіть код з картинки
             </label>
         </div>
         <div class="control-group">
@@ -63,11 +64,9 @@
         </div>
         <div class="form-actions">
             <button type="submit" class="btn btn-primary">
-                Register
+                Зареєструватися
             </button>
-            <button>
-                @Html.ActionLink("Cancel", "Index", null, null, new { @class = "btn" })
-            </button>
+            @Html.ActionLink("Cancel", "Index", null, null, new { @class = "btn" })
         </div>
     </fieldset>
 }

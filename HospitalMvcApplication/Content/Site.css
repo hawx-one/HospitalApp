@@ -1,43 +1,25 @@
-﻿body {
-    font-size: .85em;
-    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
-    color: #232323;
-    background-color: #fff;
-}
-
-header, footer, nav, section {
-    display: block;
-}
-
-
-/* Styles for basic forms
------------------------------------------------------------*/
-fieldset {
-    border: 1px solid #ddd;
-    padding: 0 1.4em 1.4em 1.4em;
-    margin: 0 0 1.5em 0;
-}
-
-legend {
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-textarea {
-    min-height: 75px;
-}
-
-.editor-label {
-    margin: 1em 0 0 0;
-}
-
-.editor-field {
-    margin: 0.5em 0 0 0;
+﻿/* Главні визначення стилів для сайту 
+    - основний шрифт
+    - міжрядковий інтервал
+    - розмір шрифту
+    - основні кольори посилань і тексту
+    - h1, h2, h3 ...
+    - a 
+    - p
+*/
+body
+{
+    padding-top : 40px !important;
 }
 
 
-/* Styles for validation helpers
------------------------------------------------------------*/
+/* Додаткові класи:
+    - .error
+    - .field-validation-error и др.
+    - .show-me { border : 1px solid red; }
+    - .hidden {display : none; }
+    - .relative { position : relative; }
+    */
 .field-validation-error {
     color: #f00;
 }
@@ -59,3 +41,41 @@ textarea {
 .validation-summary-valid {
     display: none;
 }
+
+.select-day
+{
+    width : 50px;
+}
+.select-month
+{
+    width : 90px;
+}
+.select-year
+{
+    width : 70px;
+}
+/* Основні допоміжні вікна і стилі
+    - .popup-window 
+    - .popup-window .close 
+    - .popup-window .wrapper
+    - .popup-window .header 
+    - .error-message
+    - .info-message
+    */
+
+/* Основні стилі сайту
+    - header
+    - .logo
+    - .user-login
+    - nav.main-menu
+    - .main-content
+    - footer
+*/
+
+/* Головна сторінка */
+
+/* Сторінка входу */
+
+/* Сторінка помилки */
+
+/* Інші сторінки */
