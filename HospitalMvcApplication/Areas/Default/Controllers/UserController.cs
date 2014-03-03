@@ -67,5 +67,9 @@ namespace HospitalMvcApplication.Areas.Default.Controllers
             ci.Dispose();
             return null;
         }
+        public ActionResult DutyTable()
+        {
+            return View();
+        }
     }
 }

@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "DutyTable";
+    Layout = "~/Areas/Default/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DutyTable</h2>
+
+<p>
+   
+    <table border="1">
+        <tr>
+            <th>
+                Андрій Всеволода
+            </th>
+            @for (int day = 1; day <= System.DateTime.DaysInMonth(System.DateTime.Now.Year, System.DateTime.Now.Month); day++)
+            {
+                <th>@day</th>
+            }
+        </tr>
+        <tr>
+            <th>
+               Петро Гарчик
+            </th>
+            <th>
+                д
+            </th>
+            <th>
+                н
+            </th>
+        </tr>
+    </table> 
+</p>
