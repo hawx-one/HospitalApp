@@ -7,22 +7,23 @@
 
 <p>
    
-    <table border="1">
+    <table border="1" width="80%" align="center">
         <tr>
-            <th>
-                Андрій Всеволода
-            </th>
+            <th><center>П.І.П</center></th>
+            <th>Посада</th>  
             @for (int day = 1; day <= System.DateTime.DaysInMonth(System.DateTime.Now.Year, System.DateTime.Now.Month); day++)
             {
-                <th>@day</th>
+                <th><center>@day</center></th>
             }
+            <th>Відпр</th>
+            <th>Підпис</th>
         </tr>
         <tr>
             <th>
-               Петро Гарчик
+                Петро Гарчик
             </th>
             <th>
-                д
+                Фельшер
             </th>
             <th>
                 н
