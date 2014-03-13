@@ -71,5 +71,10 @@ namespace HospitalMvcApplication.Areas.Default.Controllers
         {
             return View();
         }
+
+        public ActionResult DutyAdminTable()
+        {
+            return View();
+        }
     }
 }

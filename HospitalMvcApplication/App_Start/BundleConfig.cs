@@ -8,7 +8,8 @@ namespace HospitalMvcApplication
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-1.*"));
+                        "~/Scripts/jquery-1.*")
+                        .Include("~/Scripts/script.js"));
 
 
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
@@ -18,7 +19,8 @@ namespace HospitalMvcApplication
                         "~/Scripts/bootstrap*"));
 
             bundles.Add(new StyleBundle("~/Content/css")
-                    .Include("~/Content/site.css")  /* правильний порядок */
+                    .Include("~/Content/site.css")
+                    .Include("~/Content/base.css")/* правильний порядок */
                     .Include("~/Content/bootstrap*"));
         }
     }

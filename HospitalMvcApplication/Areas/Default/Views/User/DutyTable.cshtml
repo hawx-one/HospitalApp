@@ -6,28 +6,30 @@
 <h2>DutyTable</h2>
 
 <p>
-   
+
     <table border="1" width="80%" align="center">
-        <tr>
-            <th><center>П.І.П</center></th>
-            <th>Посада</th>  
-            @for (int day = 1; day <= System.DateTime.DaysInMonth(System.DateTime.Now.Year, System.DateTime.Now.Month); day++)
-            {
-                <th><center>@day</center></th>
-            }
-            <th>Відпр</th>
-            <th>Підпис</th>
-        </tr>
-        <tr>
-            <th>
-                Петро Гарчик
-            </th>
-            <th>
-                Фельшер
-            </th>
-            <th>
-                н
-            </th>
-        </tr>
-    </table> 
+          <tr>
+              <th><center>П.І.П</center></th>
+              <th>Посада</th>
+              @for (int day = 1; day <= System.DateTime.DaysInMonth(System.DateTime.Now.Year, System.DateTime.Now.Month); day++)
+              {
+                  <th><center>@day</center></th>
+              }
+              <th>Відпр</th>
+              <th>Підпис</th>
+          </tr>
+          <tr>
+              <th>
+                  Петро Гарчик
+              </th>
+              <th>
+                  Фельшер
+              </th>
+              <th>
+                  н
+              </th>
+         </tr>
+        </table>
+    
+
 </p>
