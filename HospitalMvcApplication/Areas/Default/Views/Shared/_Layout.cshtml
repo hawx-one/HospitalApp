@@ -10,15 +10,15 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-fixed-top">
+    @*<div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
-                <ul class="nav nav-pills pull-right">
+                <ul class="nav nav-pills pull-right">*@
                     @Html.Action("UserLogin", "Home")
-                </ul>
+                @*</ul>
             </div>
         </div>
-    </div>
+    </div>*@
 
     @RenderBody()
 

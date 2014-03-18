@@ -7,29 +7,35 @@
 
 <p>
 
-    <table border="1" width="80%" align="center">
-          <tr>
-              <th><center>П.І.П</center></th>
-              <th>Посада</th>
-              @for (int day = 1; day <= System.DateTime.DaysInMonth(System.DateTime.Now.Year, System.DateTime.Now.Month); day++)
-              {
-                  <th><center>@day</center></th>
-              }
-              <th>Відпр</th>
-              <th>Підпис</th>
-          </tr>
-          <tr>
-              <th>
-                  Петро Гарчик
-              </th>
-              <th>
-                  Фельшер
-              </th>
-              <th>
-                  н
-              </th>
-         </tr>
-        </table>
-    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>П.І.П</th>
+                <th>Посада</th>
+                @for (int day = 1; day <= System.DateTime.DaysInMonth(System.DateTime.Now.Year, System.DateTime.Now.Month); day++)
+                {
+                    <th>@day</th>
+                }
+                <th>Відпр</th>
+                <th>Підпис</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Павлів Андрій Володимирович</th>
+                <th>Фельшер</th>
+                @for (int day = 1; day <= System.DateTime.DaysInMonth(System.DateTime.Now.Year, System.DateTime.Now.Month); day++)
+                {
+                    <td>д</td>
+                }
+                <th>Joh</th>
+                <th>John</th>
+            </tr>
+            </tbody>
+    </table>
+
+
+
+
 
 </p>

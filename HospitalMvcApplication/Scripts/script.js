@@ -42,7 +42,7 @@ TABLE.editable = function(button) {
       
       var $input = $('<input type="text" />')
         .val(_cell.data('text'))
-        .width(_cell.width() - 16);
+        .width(_cell.width()-3);
         
       _cell.append($input);
     });

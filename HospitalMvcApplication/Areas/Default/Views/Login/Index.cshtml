@@ -4,36 +4,31 @@
     Layout = "~/Areas/Default/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Вхід</h2>
-
-@using (Html.BeginForm("Index", "Login", FormMethod.Post, new { @class = "form-horizontal" }))
+@using (Html.BeginForm("Index", "Login", FormMethod.Post, new { @class = "submit" }))
 {
-    <fieldset>
-        <legend>Вхід</legend>
-        <div class="control-group">
-            <label class="control-label" for="Email">
-                Email
-            </label>
-            <div class="controls">
-                @Html.TextBox("Email", Model.Email, new { @class = "input-xlarge" })
-                <p class="help-block">Введіть Email</p>
-                @Html.ValidationMessage("Email")
-            </div>
+    
+    <div id="login-form">
+        <p>АВТОРИЗАЦИЯ</p>
+        <fieldset>
+      
+           
 
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="Password">
-                Пароль
-            </label>
-            <div class="controls">
-                @Html.Password("Password", Model.Password, new { @class = "input-xlarge" })
+                @Html.TextBox("Email", Model.Email, new { @class = "password" })
+                @Html.ValidationMessage("Email")
+
+
+
+
+                @Html.Password("Password", Model.Password, new { @class = "password" })
                 @Html.ValidationMessage("Password")
-            </div>
-        </div>
-        <div class="form-actions">
-            <button type="submit" class="btn btn-primary">
-                Увійти
-            </button>
-        </div>
-    </fieldset>
+
+
+                
+                <input type="submit" value="Увійти" />
+                   
+               
+           
+        </fieldset>
+    </div>
+    
 }

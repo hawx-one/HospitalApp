@@ -15,13 +15,16 @@ namespace HospitalMvcApplication
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                        "~/Scripts/bootstrap*"));
+            //bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+            //            "~/Scripts/bootstrap*"));
 
             bundles.Add(new StyleBundle("~/Content/css")
-                    .Include("~/Content/site.css")
-                    .Include("~/Content/base.css")/* правильний порядок */
-                    .Include("~/Content/bootstrap*"));
+                    //.Include("~/Content/site.css")/* правильний порядок */
+                    .Include("~/Content/base.css")
+                    .Include("~/Content/templatemo_style.css")
+                    .Include("~/Content/login_form.css")
+                   // .Include("~/Content/bootstrap*")
+                    );
         }
     }
 
